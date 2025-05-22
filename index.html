@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Atendimento ao Cliente</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="relatorio-form">
+            <div class="header">
+                <div class="logo-left">
+                    <img src="img/cerb.jpeg" alt="CERB Logo" id="cerb-logo">
+                </div>
+                <div class="title">
+                    <h1>RELATÓRIO DE ATENDIMENTO AO CLIENTE</h1>
+                </div>
+                <div class="logo-right">
+                    <img src="img/santander.png" alt="Santander Logo" id="santander-logo">
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="row">
+                    <div class="col">
+                        <label for="chamado">Nº DO CHAMADO:</label>
+                        <input type="text" id="chamado" name="chamado">
+                    </div>
+                    <div class="col">
+                        <label for="servico">SERVIÇO:</label>
+                        <input type="text" id="servico" name="servico" value="REQUISIÇÃO" readonly>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="hora-partida">HORA PARTIDA:</label>
+                        <div class="time-input">
+                            <input type="text" id="hora-partida-h" name="hora-partida-h" maxlength="2" placeholder="__">
+                            <span>:</span>
+                            <input type="text" id="hora-partida-m" name="hora-partida-m" maxlength="2" placeholder="__">
+                            <span>H</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="hora-inicio">HORA INÍCIO ATENDIMENTO:</label>
+                        <div class="time-input">
+                            <input type="text" id="hora-inicio-h" name="hora-inicio-h" maxlength="2" placeholder="__">
+                            <span>:</span>
+                            <input type="text" id="hora-inicio-m" name="hora-inicio-m" maxlength="2" placeholder="__">
+                            <span>H</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="hora-chegada">HORA CHEGADA:</label>
+                        <div class="time-input">
+                            <input type="text" id="hora-chegada-h" name="hora-chegada-h" maxlength="2" placeholder="__">
+                            <span>:</span>
+                            <input type="text" id="hora-chegada-m" name="hora-chegada-m" maxlength="2" placeholder="__">
+                            <span>H</span>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="hora-termino">HORA TÉRMINO ATENDIMENTO:</label>
+                        <div class="time-input">
+                            <input type="text" id="hora-termino-h" name="hora-termino-h" maxlength="2" placeholder="__">
+                            <span>:</span>
+                            <input type="text" id="hora-termino-m" name="hora-termino-m" maxlength="2" placeholder="__">
+                            <span>H</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="agencia">AGÊNCIA:</label>
+                        <input type="text" id="agencia" name="agencia">
+                    </div>
+                    <div class="col">
+                        <label for="uniorg">UNIORG:</label>
+                        <input type="text" id="uniorg" name="uniorg">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="endereco">ENDEREÇO:</label>
+                        <input type="text" id="endereco" name="endereco">
+                    </div>
+                    <div class="col-small">
+                        <label for="numero">Nº:</label>
+                        <input type="text" id="numero" name="numero">
+                    </div>
+                    <div class="col">
+                        <label for="complemento">COMPLEMENTO:</label>
+                        <input type="text" id="complemento" name="complemento">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="bairro">BAIRRO:</label>
+                        <input type="text" id="bairro" name="bairro">
+                    </div>
+                    <div class="col">
+                        <label for="municipio">MUNICÍPIO:</label>
+                        <input type="text" id="municipio" name="municipio">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-small">
+                        <label for="uf">UF:</label>
+                        <input type="text" id="uf" name="uf" maxlength="2">
+                    </div>
+                    <div class="col">
+                        <label for="telefone">TELEFONE:</label>
+                        <div class="phone-input">
+                            <span>(</span>
+                            <input type="text" id="telefone-ddd" name="telefone-ddd" maxlength="2" placeholder="__">
+                            <span>)</span>
+                            <input type="text" id="telefone-numero" name="telefone-numero" placeholder="__________">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>EQUIPAMENTO A SER ATENDIDO</h2>
+                <div class="checkbox-grid">
+                    <div class="checkbox-col">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="nettop-lojas" name="equipamento" value="Nettop Lojas">
+                            <label for="nettop-lojas">Nettop Lojas</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="nettop-desktop" name="equipamento" value="Nettop / Desktop Regional">
+                            <label for="nettop-desktop">Nettop / Desktop Regional</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="nettop-tv" name="equipamento" value="Nettop TV">
+                            <label for="nettop-tv">Nettop TV</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="android-box" name="equipamento" value="Android Box">
+                            <label for="android-box">Android Box</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="notebook-lojas" name="equipamento" value="Notebook Lojas">
+                            <label for="notebook-lojas">Notebook Lojas</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="notebook-corporativo" name="equipamento" value="Notebook Corporativo">
+                            <label for="notebook-corporativo">Notebook Corporativo</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="servidor" name="equipamento" value="Servidor">
+                            <label for="servidor">Servidor</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="servidor-dlbc" name="equipamento" value="Servidor DLBC">
+                            <label for="servidor-dlbc">Servidor DLBC</label>
+                        </div>
+                    </div>
+                    <div class="checkbox-col">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="teclado" name="equipamento" value="Teclado">
+                            <label for="teclado">Teclado</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="mouse" name="equipamento" value="Mouse">
+                            <label for="mouse">Mouse</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="monitor" name="equipamento" value="Monitor">
+                            <label for="monitor">Monitor</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="scanner" name="equipamento" value="Scanner de Cheques">
+                            <label for="scanner">Scanner de Cheques</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="impressora-recibos" name="equipamento" value="Impressora de recibos">
+                            <label for="impressora-recibos">Impressora de recibos</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="leitora-documentos" name="equipamento" value="Leitora de documentos">
+                            <label for="leitora-documentos">Leitora de documentos</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="leitora-codigo" name="equipamento" value="Leitora de código de barras">
+                            <label for="leitora-codigo">Leitora de código de barras</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="impressora-autenticadora" name="equipamento" value="Impressora Autenticadora">
+                            <label for="impressora-autenticadora">Impressora Autenticadora</label>
+                        </div>
+                    </div>
+                    <div class="checkbox-col">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="pinpad-cripto" name="equipamento" value="PinPad Cripto">
+                            <label for="pinpad-cripto">PinPad Cripto</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="pin-liso" name="equipamento" value="Pin Liso">
+                            <label for="pin-liso">Pin Liso</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="adaptador-pin" name="equipamento" value="Adaptador Pin Liso (Azul)">
+                            <label for="adaptador-pin">Adaptador Pin Liso (Azul)</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="hub-usb" name="equipamento" value="HUB USB">
+                            <label for="hub-usb">HUB USB</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="leitor-digital" name="equipamento" value="Leitor de Digital">
+                            <label for="leitor-digital">Leitor de Digital</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="webcam" name="equipamento" value="Webcam">
+                            <label for="webcam">Webcam</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="cabos" name="equipamento" value="Cabos">
+                            <label for="cabos">Cabos</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="outros" name="equipamento" value="Outros">
+                            <label for="outros">Outros: Especificar:</label>
+                            <input type="text" id="outros-especificar" name="outros-especificar" class="inline-input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>DESCRITIVO DEFEITO / CAUSA</h2>
+                <textarea id="descritivo-defeito" name="descritivo-defeito" rows="3"></textarea>
+            </div>
+
+            <div class="section two-columns">
+                <div class="column">
+                    <h3 class="section-subtitle red">SEMPRE PREENCHER</h3>
+                    <h3 class="section-subtitle">ATUAL RECONFIGURADO OU RETIRADO</h3>
+                    
+                    <div class="form-group">
+                        <label for="patrimonio-atual">PATRIMÔNIO:</label>
+                        <input type="text" id="patrimonio-atual" name="patrimonio-atual">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="serie-atual">NÚMERO DE SÉRIE:</label>
+                        <input type="text" id="serie-atual" name="serie-atual">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="modelo-atual">MODELO:</label>
+                        <input type="text" id="modelo-atual" name="modelo-atual">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="hostname-atual">HOSTNAME (o mesmo):</label>
+                        <input type="text" id="hostname-atual" name="hostname-atual">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mac-atual">MAC ADDRESS:</label>
+                        <input type="text" id="mac-atual" name="mac-atual">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ip-atual">IP ADDRESS:</label>
+                        <input type="text" id="ip-atual" name="ip-atual">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>NECESSÁRIO BACKUP:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="backup-sim" name="backup" value="SIM">
+                            <label for="backup-sim">SIM</label>
+                            <input type="radio" id="backup-nao" name="backup" value="NÃO">
+                            <label for="backup-nao">NÃO</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="arquivos-extraidos">QUANTIDADE DE ARQUIVOS EXTRAÍDOS:</label>
+                        <input type="text" id="arquivos-extraidos" name="arquivos-extraidos" class="small-input">
+                        <span>GB</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="restaurado">RESTAURADO:</label>
+                        <input type="text" id="restaurado" name="restaurado" class="small-input">
+                        <span>GB</span>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <h3 class="section-subtitle red">PREENCHER EM CASO DE TROCA</h3>
+                    <h3 class="section-subtitle">EQUIPAMENTO NOVO</h3>
+                    
+                    <div class="form-group">
+                        <label for="patrimonio-novo">PATRIMÔNIO:</label>
+                        <input type="text" id="patrimonio-novo" name="patrimonio-novo">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="serie-novo">NÚMERO DE SÉRIE:</label>
+                        <input type="text" id="serie-novo" name="serie-novo">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="modelo-novo">MODELO:</label>
+                        <input type="text" id="modelo-novo" name="modelo-novo">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="hostname-novo">HOSTNAME NOVO:</label>
+                        <input type="text" id="hostname-novo" name="hostname-novo">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mac-novo">MAC ADDRESS:</label>
+                        <input type="text" id="mac-novo" name="mac-novo">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ip-novo">IP ADDRESS:</label>
+                        <input type="text" id="ip-novo" name="ip-novo">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>TIPO DE TERMINAL:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="terminal-gerente" name="terminal" value="Gerente">
+                            <label for="terminal-gerente">Gerente</label>
+                            <input type="radio" id="terminal-caixa" name="terminal" value="Caixa">
+                            <label for="terminal-caixa">Caixa</label>
+                            <input type="radio" id="terminal-hibrido" name="terminal" value="Gerente Híbrido">
+                            <label for="terminal-hibrido">Gerente Híbrido</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="outros-terminal">OUTROS: ESPECIFICAR:</label>
+                        <input type="text" id="outros-terminal" name="outros-terminal">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>POSSUI KIT BIOMETRIA:</label>
+                        <div class="radio-group">
+                            <input type="radio" id="biometria-sim" name="biometria" value="SIM">
+                            <label for="biometria-sim">SIM</label>
+                            <input type="radio" id="biometria-nao" name="biometria" value="NÃO">
+                            <label for="biometria-nao">NÃO</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="form-group">
+                    <label for="codigo-solucao">CÓDIGO SOLUÇÃO:</label>
+                    <input type="text" id="codigo-solucao" name="codigo-solucao">
+                </div>
+                
+                <div class="form-group">
+                    <label for="descritivo-solucao">DESCRITIVO SOLUÇÃO:</label>
+                    <textarea id="descritivo-solucao" name="descritivo-solucao" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="section two-columns">
+                <div class="column">
+                    <div class="form-group">
+                        <label for="responsavel">RESPONSÁVEL:</label>
+                        <input type="text" id="responsavel" name="responsavel">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cpf-rg-responsavel">CPF / RG:</label>
+                        <input type="text" id="cpf-rg-responsavel" name="cpf-rg-responsavel">
+                    </div>
+                    
+                    <div class="signature-container">
+                        <canvas id="assinatura-local" class="signature-pad"></canvas>
+                        <button type="button" class="clear-button" id="clear-local">Limpar</button>
+                        <div class="signature-label">ASSINATURA E CARIMBO LOCAL</div>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="form-group">
+                        <label for="tecnico">TÉCNICO:</label>
+                        <input type="text" id="tecnico" name="tecnico">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cpf-rg-tecnico">CPF / RG:</label>
+                        <input type="text" id="cpf-rg-tecnico" name="cpf-rg-tecnico">
+                    </div>
+                    
+                    <div class="signature-container">
+                        <canvas id="assinatura-tecnico" class="signature-pad"></canvas>
+                        <button type="button" class="clear-button" id="clear-tecnico">Limpar</button>
+                        <div class="signature-label">ASSINATURA TÉCNICO</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="row">
+                    <div class="col">
+                        <label for="local">LOCAL:</label>
+                        <input type="text" id="local" name="local">
+                    </div>
+                    <div class="col">
+                        <label for="data">DATA:</label>
+                        <div class="date-input">
+                            <input type="text" id="data-dia" name="data-dia" maxlength="2" placeholder="__">
+                            <span>/</span>
+                            <input type="text" id="data-mes" name="data-mes" maxlength="2" placeholder="__">
+                            <span>/</span>
+                            <input type="text" id="data-ano" name="data-ano" maxlength="4" placeholder="____">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button type="button" id="salvar-pdf">Salvar como PDF</button>
+                <button type="button" id="limpar-form">Limpar Formulário</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
